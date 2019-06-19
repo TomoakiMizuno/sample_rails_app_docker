@@ -11,6 +11,9 @@ services:
     volumes:
       - .:/sample_rails_application
     ports:
+      # ruby-debug-ide 用
+      - "1234:1234"
+      - "26162:26162"
       - "3000:3000"
     depends_on:
       - db
